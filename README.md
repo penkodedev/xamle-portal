@@ -112,9 +112,9 @@ Distribuido bajo la Licencia MIT. Ver `LICENSE` para más información.
 
 ## 📞 Contacto
 
-**MAD África** - https://madafrica.es/
+**MAD África** - https://penkode.com/
 
-Desarrollado por [Tu Nombre/Empresa]
+Desarrollado por Penkode (Paulo Ramalho)
 
 ```
 
