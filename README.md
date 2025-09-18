@@ -112,7 +112,7 @@ Distribuido bajo la Licencia MIT. Ver `LICENSE` para más información.
 
 ## 📞 Contacto
 
-**MAD África** - https://penkode.com/
+**Penkode** - https://penkode.com/
 
 Desarrollado por Penkode (Paulo Ramalho)
 
