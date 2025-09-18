@@ -1,0 +1,142 @@
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    z-index: 997;
+}
+
+ul.main-nav li {  
+  font-size: $text-size * 0.97; //Main menu font size
+}
+
+.main-nav li {
+    @include copy-text;
+    display: block;
+    margin-bottom: 0px !important; //Fix include text margin
+}
+
+.main-nav li a {
+    color: $main-nav-color;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    text-decoration: none;
+    border-radius: 8px;
+    @include soft-menu;
+}
+.main-nav li a:hover {
+    background-color: $main-nav-hover-bg;
+    color: #000;
+}
+
+.menu-item-has-children > a:after {
+    content: '\f107';
+    font-family: 'FontAwesome';
+    font-size: 1em;
+    font-weight: 800;
+    color: #000;
+    margin: 2px 0px 6px 6px;
+    transform: rotate(0deg);
+}
+.menu-item-has-children > a:after:hover {
+    color: $main-nav-hover-color;
+}
+
+dl.main-nav,
+ol.main-nav,
+ul.main-nav {
+    margin: 0 !important; // Clean lists margins for main menu
+}
+
+.main-nav li.quiz {
+  position: relative; 
+}
+
+.main-nav li.quiz::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 7px;
+    width: 7px;
+    height: 7px;
+    background: #FFB41D;
+    border-radius: 50%;
+}
+
+
+/* SUB MENU *************************** */
+
+.main-nav ul li {
+    font-size: $second-level-link-size; //Sub menu font size
+}
+
+@media (min-width: 560px) {
+    nav ul ul {
+        display: none;
+        position: absolute;
+    }
+}
+
+nav ul li:hover > ul {
+    display: block;
+    padding-left: 2rem;
+}
+
+@media (min-width: 560px) {
+    nav ul li:hover > ul {
+        padding-left: 0;
+        background: $main-nav-hover-bg; //Sub menu bg color
+}
+}
+
+nav ul ul a {
+        width:200px; //Sub menu width
+}
+
+nav ul li:hover > ul a {
+        color: black;
+    }
+
+.main-nav .sub-menu {
+    li {
+        display: flex;
+        /*padding-right: 3em;*/
+        white-space: nowrap;
+    }
+
+    li:hover,
+    li a:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+nav ul ul ul {
+        margin: 0 0 0 100%;
+}
+
+.menu-item-has-children .menu-item-has-children > a:after {
+    content: '\f105';
+    font-family: 'FontAwesome';
+    font-weight: bold;
+    color: #fff;
+    margin: 0px 0px 0px 8px;
+    transform: rotate(0deg);
+}
+
+//current and children items colors
+.main-nav li.current-menu-item > a,
+.main-nav li.current-menu-ancestor > a,
+.main-nav li.current_page_item > a,
+.main-nav li.current_page_ancestor > a, 
+.main-nav li.current_page_parent > a {
+    color: $current-item-color;    
+    position: relative; // Necesario para posicionar el pseudoelemento
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0; // Lo posicionamos en la parte inferior
+        left: 16px; // Creamos el espacio a la izquierda
+        right: 16px; // Creamos el espacio a la derecha
+        height: 5px; // El grosor del borde
+        background-color: #FFB41D; // El color del borde
+    }
+}

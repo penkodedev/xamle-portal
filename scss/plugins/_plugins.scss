@@ -1,0 +1,46 @@
+//----------------------------------------------------
+//            MAILPOET
+//----------------------------------------------------
+#mailpoet_form_1 form.mailpoet_form {
+  padding: 0 !important;
+}
+
+//----------------------------------------------------
+//            YOAST BREADCRUMBS
+//----------------------------------------------------
+p#breadcrumbs {
+  a {
+    font-size: $text-size - 0.26 !important;
+    color: #7c7c7c;
+    text-decoration: none !important;
+  }
+  .breadcrumb_last {
+    font-size: $text-size - 0.16 !important;
+    font-weight: bold;
+  }
+}
+
+//----------------------------------------------------
+//            CONTACT FORM7
+//----------------------------------------------------
+
+
+
+//----------------------------------------------------
+//            GUTENBERG
+//----------------------------------------------------
+
+.wp-block-gallery {
+  margin: 0px;
+  li.blocks-gallery-item:before {
+    content: 'none';
+    display: none;
+  }
+}
+
+.wp-block-media-text {
+  margin-bottom: 30px;
+  .wp-block-media-text__media {
+    overflow: hidden;
+  }
+}

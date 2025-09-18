@@ -1,0 +1,114 @@
+.page-title.tax {
+    flex-direction: column;
+
+    p {
+        font-size: 1.1em;
+        color: #fff;
+        text-align: center;
+        margin-top: 20px;
+        max-width: 320px;
+
+        strong {
+            color: #FFB41D;
+        }
+    }
+
+}
+
+.recursos-filtros-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; // Permite que los filtros pasen a la siguiente línea si no caben
+    gap: 12px; // Espacio entre los filtros
+    align-items: flex-end; // Alinea los elementos en la parte inferior
+    margin-bottom: 60px;
+    //background-color: #efefef;
+    //padding: 24px;
+
+    .filtro-select {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 180px; // Controla el crecimiento, decrecimiento y base del ancho
+        max-width: 230px; // Ancho máximo para cada filtro
+
+        option {
+            text-transform: none;
+        }
+
+        select {
+            font-size: 1em !important;
+            text-transform: none;
+            background-color: #fff;
+            border: 3px solid #dbdbdb;
+            border-radius: 8px;
+            padding: 8px 12px !important;
+            margin: 0 !important;
+            transition: background-color 0.3s ease, color 0.3s ease; // Animación suave
+
+            // Estilos cuando un filtro está activo
+            &:has(option:checked:not([value=""])):not(:focus) {
+                background-color: #3C3C3C;
+                color: white !important; // Forzamos el color del texto a blanco
+                border-color: #3C3C3C;
+            }
+        }
+    }
+
+    .filtro-botones {
+        display: flex;
+        gap: 32px; // Espacio entre los botones
+
+        .button {
+            font-size: 1.15em !important;
+            margin: 0;
+            background: #FFB41D !important;
+            border: 3px solid #dbdbdb !important;
+            padding: 5px;
+        }
+
+        .buscar {
+            display: none; // Oculta el botón de buscar
+        }
+
+        .limpiar {
+            padding: 7px 29px;
+            border-radius: 9px;
+
+            &:hover {
+                background: #b6b6b6!important;
+            }
+        }
+    }
+}
+
+.filtro-spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.filtro-spinner {
+    border: 5px solid $branding-color2;
+    border-top: 5px solid $branding-color1; // Color del spinner
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

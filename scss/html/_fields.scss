@@ -1,0 +1,45 @@
+/*
+----------------------------
+    @INPUTS   
+----------------------------
+*/
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    @include inputs;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+	min-height: 140px;
+}
+
+label {
+	display: flex;
+	font-family: $text-font-strong;
+	font-size: $text-size - 0.2rem;
+	line-height: normal;
+	padding-bottom: 20px;
+}
+
+placeholder {
+	font-family: $text-font-strong;
+	font-size: $text-size - 0.2rem;
+	display: flex;
+	line-height: normal;
+}
+

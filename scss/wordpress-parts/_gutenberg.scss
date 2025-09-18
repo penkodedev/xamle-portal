@@ -1,0 +1,116 @@
+/*
+----------------------------
+    @GUTENBERG  
+----------------------------
+*/
+
+//
+// HTML BLOCK ELEMENTS
+//
+
+/* Add parallax effect to the element with the has-parallax class */
+.has-parallax {
+    background-attachment: fixed !important;
+    background-size: cover;
+  }
+
+
+pre.wp-block-verse {
+	background: none;
+	font: $text-font !important;
+}
+
+//
+// COVER IMAGE buttons & text
+//
+
+
+div.wp-block-cover {
+	padding: 20px 40px;
+}
+
+div.wp-block-cover p,
+div.wp-block-cover p strong {
+	font-size: $text-size - 0.2rem;
+}
+
+div.wp-block-cover p,
+div.wp-block-cover p strong {
+	margin: 0 !important;
+}
+
+div.wp-block-cover p strong {
+	@include copy-text-strong;
+	color: $white;
+	font-size: $text-size + 0.6rem;
+	line-height: $text-size + 1rem;
+    z-index: 9;
+
+    a {
+        color: $link-color;
+    }
+}
+
+
+
+//
+// COLUMNS
+//
+
+.wp-block-column ul {
+    margin: 0;
+    padding: 0;
+}
+
+div.wp-block-column div.wp-block-image figcaption {
+    font-weight: $bold;
+}
+
+
+//
+// GALLERIES IMAGES HEIGHT ISSUE
+//
+.wp-block-gallery .blocks-gallery-image figure, .wp-block-gallery .blocks-gallery-item figure {
+  height: auto !important;
+}
+
+.blocks-gallery-item figcaption.blocks-gallery-item__caption {
+	background: none !important;
+	text-align: left;
+}
+
+
+//
+// LATEST POSTS & ARCHIVES
+//
+/*
+.wp-block-latest-posts ,
+.wp-block-archives {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.wp-block-latest-posts li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
+    margin-bottom: 10px;
+
+    a {
+        font-size:$text-size/1.12;
+        line-height: $text-lh/1.1;
+        text-decoration: none;
+        color: $black;
+        padding: 0 0 0 10px;
+        
+        &::hover {
+            color: $branding-color2;
+        }
+    }
+}
+
+ul.wp-block-latest-posts li::before,
+ul.wp-block-archives li::before{
+    content: none;
+}*/

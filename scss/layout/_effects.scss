@@ -1,0 +1,99 @@
+.curved-underline {
+    position: relative;
+    display: inline-block !important;
+
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        height: 5px;
+        width: 100% !important;
+        border: solid 8px red;
+        border-color: $branding-color1 transparent transparent transparent;
+        border-radius: 50%;
+        transform: rotate(3deg);
+        /* You can specify the degree of rotation */
+
+    }
+}
+
+/*
+----------------------------
+    @SHIMMER
+----------------------------
+*/
+
+#shimmer {
+	background: linear-gradient(270deg, #ffdea9, #647a93);
+	//background-size: 400% 400%;
+
+	-webkit-animation: shimmer 10s ease infinite;
+	-moz-animation: shimmer 10s ease infinite;
+	animation: shimmer 10s ease infinite;
+}
+
+	@keyframes shimmer { 
+		0%{background-position:0% 50%}
+		50%{background-position:100% 50%}
+		100%{background-position:0% 50%}
+	}
+	@-webkit-keyframes shimmer {
+		 0%{background-position:0% 50%}
+		 50%{background-position:100% 50%}
+		 100%{background-position:0% 50%}
+	}
+	@-moz-keyframes shimmer {
+		 0%{background-position:0% 50%}
+		 50%{background-position:100% 50%}
+		 100%{background-position:0% 50%}
+	}
+
+#scrolling-text-container {
+	overflow: hidden;
+	white-space: nowrap;
+
+	p {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+/*
+----------------------------
+    @SCROLLING TEXT
+----------------------------
+*/
+.scrolling-text {
+	display: flex;
+	width: 100%;
+	background-color: rgb(218, 218, 218);
+	padding: 12px 0;
+
+	p {
+		color: rgb(0, 0, 0) !important;
+		font-size: 1em !important;
+		max-width: none !important;
+		text-align: right !important;
+		margin-bottom: 0 !important;
+
+		strong {
+			@include copy-text-strong;
+			font-size: $text-size - 0.2 ;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: $white;
+		background-color: $branding-color1;
+		padding: 4px 16px;
+		border-radius: 5px;
+
+
+		&:hover {
+			background-color: black;
+			color: $white;
+		}
+	}
+}

@@ -1,0 +1,63 @@
+/*
+----------------------------
+    @RESETS   
+----------------------------
+*/
+
+html { -webkit-text-size-adjust: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; min-height: 100%; margin: 0px; padding: 0px; }
+pre { font-family: monospace, monospace; font-size: 1.1em; }
+a { background-color: transparent; }
+abbr[title] { border-bottom: none; text-decoration: underline dotted; }
+small { font-size: 80%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+img { border-style: none; height: auto; }
+button, input, optgroup, select, textarea { font-family: inherit; font-size: 100%; margin: 0; }
+button, input { overflow: visible; }
+button, select { text-transform: none; }
+button, [type="button"], [type="reset"], [type="submit"] 
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { border-style: none; padding: 0; }
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring { outline: 1px dotted; }
+fieldset { padding: 0.35em 0.75em 0.625em; }
+progress { vertical-align: baseline; }
+textarea { overflow: auto; }
+[type="checkbox"], [type="radio"] { box-sizing: border-box; padding: 0; }
+[type="search"]::-webkit-search-decoration 
+details { display: block; }
+summary { display: list-item; }
+template { display: none; }
+[hidden] { display: none; }
+
+
+/*
+----------------------------
+    @BASE   
+----------------------------
+*/
+
+html {
+    font-size: 15px; // you can change another sizes by using REM
+}
+
+body {
+    background: #f8f7f7 !important; // Body background color
+}
+
+
+figure {
+    margin: 0;
+    /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+iframe {
+    border: 0;
+}
+
+hr {
+	border: 0 !important;
+	height: 1px;
+	width: 100%;
+	background-color: #000000;
+	margin: 12px 0 12px 0 !important;
+}

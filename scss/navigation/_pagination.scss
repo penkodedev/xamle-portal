@@ -1,0 +1,77 @@
+.spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*
+----------------------------
+    @PAGINATION   
+----------------------------
+*/
+// single page
+#nav-single {
+    
+    display: flex;
+    flex-wrap: wrap;
+
+    .pag-previous a,
+    .pag-next a {
+        font-size: 1em;
+    }
+}
+
+// archives
+nav.pagination {
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    margin: 60px 0 0 0;
+
+    a.page-numbers,
+    span.page-numbers {
+        font-family:$text-font;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px; // Ancho fijo para forma redonda
+        height: 40px; // Alto fijo para forma redonda
+        border-radius: 50%; // Fondo redondo perfecto
+        text-decoration: none;
+        margin: 0 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        background-color: white;
+        border: 3px solid #dbdbdb;
+        color: $black;
+
+        &.next, &.prev {
+            text-transform: lowercase;
+            text-decoration: underline;
+            // Reseteamos los estilos para los botones de texto
+            background-color: transparent;
+            border: none;
+            width: auto;
+            height: auto;
+            border-radius: 0;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.pagination span.page-numbers.current {
+    background-color: $branding-color1;
+    color: $black;
+    border-color: $branding-color1;
+}

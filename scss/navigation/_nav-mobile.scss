@@ -1,0 +1,142 @@
+/*
+----------------------------
+    @MOBILE NAV  
+----------------------------
+*/
+
+
+//*** HAMBURGUER MENU ***//
+#open-menu,
+#close-menu {
+    display: block;
+    cursor: pointer;
+    //position: absolute;
+    //left: 10px; // NAV HEADER POSITION
+    //top: 31px; // NAV HEADER POSITION
+}
+
+.burguer-icon {
+    width: auto;
+    transition: all 1s ease;
+    z-index: 9999;
+    display: none;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 4px;
+	background-color: $black; // OPEN MENU BARS COLOR
+	margin: 8px 0;
+	transition: 0.4s;
+
+	@media screen and (max-width: 640px) {
+		width: 25px;
+		height: 2px;
+		margin: 5px 0;
+	}
+}
+
+
+#close-menu .bar1 {
+	-webkit-transform: rotate(45deg) translate(5px, 4px);
+	transform: rotate(45deg) translate(5px, 4px)	
+}
+
+#close-menu .bar2 {
+	-webkit-transform: rotate(-45deg) translate(5px, -2px);
+	transform: rotate(-45deg) translate(5px, -2px);
+	
+	@media screen and (max-width: 640px) {
+		-webkit-transform: rotate(-45deg) translate(2px, 0);
+		transform: rotate(-45deg) translate(2px, 0);
+}
+}
+
+#close-menu .bar3 {
+	opacity: 0;
+}
+
+a#close-menu .bar1,
+a#close-menu .bar2,
+a#close-menu .bar3 {
+	background-color: $black; // CLOSE MENU BARS COLOR
+}
+
+
+// *** PANEL NAV ***//
+ 
+.panel-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+	padding: 30px 10px;
+    width: 100%;
+    background: $black;
+    transition: all 1s ease;
+    left:-100%; //////change slide side
+    top: 70px; ///////change due header height
+    bottom: 0;
+    overflow-y: scroll;
+    z-index: 9999;
+	opacity: 0.90;
+    //filter: alpha(opacity=92); /* For IE8 and earlier */
+}
+
+.panel-nav:target {
+    left: 0; ///////change slide side
+    transition: all 0.3s ease;
+}
+
+.panel-nav:target + .burguer-icon {
+    width: 90%;
+}
+
+.panel-nav:target + .burguer-icon a#open-menu {
+    display: none;
+}
+
+.panel-nav:target + .burguer-icon a#close-menu {
+    display: block;
+}
+
+a#close-menu {
+    display: none;
+}
+
+
+
+// *** PANEL NAV MENU SETTINGS ***//
+.mobile-nav {
+    font-family: $text-font;
+    font-size: 1.5em;
+    padding: 0px;
+    margin-top: 10px;
+    list-style: none;
+    width: 100%;
+    display: block;
+}
+.mobile-nav a {
+    color: #fff; // MENU FONT COLOR
+    text-decoration: none;
+    display: block;
+    padding: 3px 0px 3px 0px;
+    
+        &:hover {
+        color: $branding-color1;
+    }
+}
+
+.mobile-nav ul.sub-menu li a  {
+	color: $branding-color2 !important;
+    list-style: none;
+    font-size: 1rem;
+}
+
+.mobile-nav ul.sub-menu {
+    padding-left: 10px;
+	list-style: circle;
+}

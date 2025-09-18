@@ -1,0 +1,140 @@
+.nav-overlay {
+    position: relative;
+	display: flex;
+}
+
+.nav-overlay:before {
+    content: '';
+    position: fixed;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+	background: rgb(0,0,0);
+	background: radial-gradient(circle, rgba(0,0,0,0.3981967787114846) 0%, rgba(0,0,0,1) 100%);
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+	z-index: 2;
+	top: 0;
+	left: 0;
+}
+.nav-focus .nav-overlay:before {
+    opacity: 0.26;
+}
+		
+
+@media screen and (min-width: 600px) {
+	li.has-mega-menu {
+		position: static;
+	}
+	
+li.has-mega-menu .level-sub1 {
+	max-width: 100%; /* megamenu width on viewport */
+	background: #000; /* megamenu background color */
+	position: absolute;
+	top: 80px; /* distance from the main menu bar */
+	min-height: 350px;
+	z-index: 100;
+	left: 0;
+	right: 0;
+	padding: 40px 20% !important;
+	margin: 0 auto;
+	opacity: 0.99; /* in case opacity is required */
+	min-width: 33%;
+	display: none; /* JUST FOR EDITING PURPOSES (COMMENT IT before finish editing) */
+		
+	a {
+		background: none !important;
+		color: white !important; // color of the first item
+	}
+	
+	li {	
+		display: flex;
+		flex-wrap: wrap;
+		min-width: 33%;
+		color: white !important; // color of the first item
+	}
+	
+	:hover {
+		background: none !important;
+	}
+}
+
+	li.has-mega-menu:hover > .sub-menu { /*flexbox fallback for browsers that do not support CSS GRID lyout*/
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	
+	li.has-mega-menu:hover > .level-sub1 {
+		grid-template-columns: repeat(auto-fit, minmax(33.3333%, 1fr));
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	
+	li.has-mega-menu:hover > .level-sub1 {
+		grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+	}
+}
+
+
+// SUB PAGES
+ul.sub-menu.level-sub2 {
+	display: flex;
+	flex-direction: column;
+	margin: 0 !important;
+	padding: 0 !important;
+	top: 85px; // distant of third level links to the title link
+	
+	a {
+		font-size: 0.88em !important;
+		color: #a3a3a3 !important; /* color of third level links */
+		width: auto;
+	}
+	
+	:hover {
+		color: #dddddd !important;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	
+	li.mega-menu-column {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 100%;
+		min-height: 1px;
+		padding: 0;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	
+	li.mega-menu-column {
+		flex: 1 0 calc(33.333%);
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	
+	li.mega-menu-column {
+		flex: 1 0 calc(25%);
+	}
+}
+
+.menu-item-has-children .menu-item-has-children > a:after { // menu ARROWS
+    content: none !important;
+	
+	&:hover {
+		color: $main-nav-hover-color;
+	}
+}
+
+// IMAGES
+.mega-menu-column img {
+	display: block;
+}

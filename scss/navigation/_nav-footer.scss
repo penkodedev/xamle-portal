@@ -1,0 +1,32 @@
+/*
+----------------------------
+    @FOOTER NAV  
+----------------------------
+*/
+.nav-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    li {
+        display: flex;
+
+        a {
+            padding: 0.5rem;
+            text-decoration: none;
+            text-transform: lowercase;
+            @include copy-text;
+            font-size: $second-level-link-size;
+            color: $footer-nav-color;
+            margin: 0px;
+        }
+    }
+}
+
+ul.nav-footer {
+    padding: 0px;
+}
+
+.nav-footer li a:hover {
+    color:$footer-nav-color-hover;
+}

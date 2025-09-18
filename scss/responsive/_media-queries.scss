@@ -1,0 +1,283 @@
+@media screen and (min-width: 800px) {
+    .col-1 {
+        width: 8.33333333%;
+    }
+
+    .col-2 {
+        width: 16.66666667%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33333333%;
+    }
+
+    .col-5 {
+        width: 41.66666667%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33333333%;
+    }
+
+    .col-8 {
+        width: 66.66666667%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33333333%;
+    }
+
+    .col-11 {
+        width: 91.66666667%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
+
+
+//----------------------------------------------------
+//            SMALLER THAN 1440px
+//----------------------------------------------------
+@media screen and (max-width: 1440px) {
+    aside {
+        display: none; // HIDE SIDEBAR POINT
+    }
+
+    .recursos-filtros-form .filtro-botones {
+        justify-content: center;
+    }
+
+}
+
+
+//----------------------------------------------------
+//            SMALLER THAN 1200px
+//----------------------------------------------------
+@media screen and (max-width: 1200px) {
+
+    main#main-container {
+        padding: 40px 0px 40px;
+    }
+
+}
+
+//----------------------------------------------------
+//            SMALLER THAN 992px
+//----------------------------------------------------
+@media screen and (max-width: 992px) {
+
+    /* Hacemos que las columnas .col-5 (y otras similares si las usas) 
+       ocupen el 50% para tener 2 columnas en tablets. */
+    .post-col.col-5 {
+        width: 100%;
+    }
+
+    .main-nav {
+        display: none; // **HIDE main nav text
+    }
+
+    .burguer-icon {
+        display: inline-block; // **SHOW burguer menu
+        cursor: pointer;
+    }
+
+    #float-nav,
+    .menu-menu-float-container {
+        display: none; // **HIDE main nav text on FLOAT BAR
+    }
+
+    form#loginform {
+        width: 90%;
+    }
+
+    .login-options-container {
+        flex-direction: column;
+    }
+
+    span.opt-sep {
+        display: none;
+    }
+}
+
+//----------------------------------------------------
+//            SMALLER THAN 768px
+//----------------------------------------------------
+@media screen and (max-width: 768px) {
+
+    /* Forzamos a que todas las columnas de post ocupen el 100% del ancho,
+       creando una sola columna en dispositivos móviles. */
+   .home .section-02 {
+	margin-bottom: 60px;
+}
+
+.post-col {
+        width: 100%;
+    }
+
+    // HEADER begin
+
+    .grid-header {
+        position: fixed;
+        background-color: #fff;
+        z-index: 9999;
+    }
+
+    #nav-float {
+        background: #fff;
+        opacity: 1 !important;
+    }
+    #header-container {
+    padding: 0 15px 0 15px;
+}
+
+
+    // HEADER end
+
+
+    footer nav {
+        display: none
+    }
+
+    article ul {
+        margin-left: 0px;
+        padding-left: 10px;
+    }
+
+    .single-product main {
+        margin-top: 10px;
+    }
+
+    p#breadcrumbs {
+        font-size: 0.94em !important;
+    }
+
+    .single-product #breadcrumbs {
+        margin: 0px 0px 20px 0px;
+    }
+
+    #nav-single .pag-previous a,
+    #nav-single .pag-next a {
+        padding: 0;
+        margin: 0;
+
+    }
+}
+
+
+//----------------------------------------------------
+//            SMALLER THAN 576px
+//----------------------------------------------------
+@media screen and (max-width: 576px) {
+
+    .home header {
+        // In case you need transparent header in home due a slideshow or hero
+        background: transparent;
+    }
+
+    /* Estilo para el header cuando se ha hecho scroll más allá del slider */
+    .home header.scrolled-past-slider {
+        background: #fff; /* O el color sólido que prefieras */
+        border-bottom: 1px solid #c4c4c4;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    #home-full-col main section {
+        padding: 40px 0 0 0;
+    }
+
+    header {
+        height: 70px;
+    }
+
+    header figure#logo-container {
+        width: 85px; /* Ajusta este valor al tamaño que necesites */
+       padding-right: 15px;
+    }
+
+    header .logo-container-wrap {
+        gap: 0;
+    }
+
+    .prognroll-bar {
+        display: none;
+    }
+
+    // ADJUST FONT SIZE FOR BETTER READING ON SMALL SCREENS
+    p,
+    article ul,
+    article ol li {
+        font-size: ($text-size/1);
+        line-height: ($text-lh/1.18);
+    }
+
+    h1 {
+        line-height: 1.1em;
+        padding-bottom: 15px;
+    }
+
+    .wp-block-image img,
+    .wp-block-image .alignleft,
+    figure.alignleft,
+    img.alignleft,
+    figure.alignright,
+    img.alignright {
+        float: none !important;
+        display: block;
+    }
+
+    .grid-item-content h5 {
+        font-size: 1.60rem;
+        line-height: 1.75rem;
+    }
+
+    .audio-player-wrapper {
+        padding: 0;
+    }
+
+    img.alignleft {
+        margin: 0 auto 15px auto;
+    }
+    
+//     .post-meta {
+//         padding: 20px 10px;
+
+//         a {
+//             font-size: 1em !important;
+//         }
+// }
+
+    .single .like-heart {
+        right: 2px;
+    }
+
+}
+
+//----------------------------------------------------
+//            SMALLER THAN 400px
+//----------------------------------------------------
+@media screen and (max-width: 400px) {
+
+    .grid-item-content {
+       padding: 0.8rem 0.8rem 0.5rem 0.8rem;
+    }
+
+    .post-type-archive-product section.page-title {
+        display: none;
+    }
+
+
+}

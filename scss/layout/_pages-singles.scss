@@ -1,0 +1,139 @@
+body.single {
+    background-color: #fff !important;
+}
+
+
+.single .grid-main {
+    padding-top: 20px !important;
+}
+
+
+.back-link {
+    margin-bottom: 20px !important;
+
+    a {
+        font-family: 'Futura-Regular';
+        font-size: 1.1em;
+        color: black;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: #6b6b6b;
+    }
+}
+
+.custom-field-container {
+    background-color: #efefef;
+    padding: 12px;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+
+.post-image img {
+    margin: 20px auto 40px auto;
+}
+
+.single .page-title h1 {
+    display: none
+}
+
+.single #nav-single {
+    background: none !important;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    a {
+        font-size: 1.3em !important;
+        background: none !important;
+    }
+}
+
+.single .recurso-autoria {
+    margin-top: 50px
+}
+
+.single a.pdf-download-link {
+    font-size: 1.14em !important;
+}
+
+/*
+----------------------------
+    @AUTHOR  
+----------------------------
+*/
+.author-container {
+    @include copy-text;
+    display: grid;
+    grid-template-rows: 30px 50px;
+    grid-template-columns: 80px 70%;
+    grid-gap: 12px;
+    grid-template-areas:
+        "media name"
+        "media desc";
+    padding: 60px 0;
+    margin: 0 0 80px 0;
+
+    .author-name {
+        grid-area: name;
+        align-self: end;
+        font-weight: $bold;
+        font-size: 1.4em !important;
+    }
+
+    .author-desc {
+        grid-area: desc;
+
+        p {
+            font-size: 0.8em !important;
+            font-weight: $normal;
+            line-height: $text-lh/1;
+            max-width: 550px;
+        }
+    }
+}
+
+.author-container img {
+    grid-area: media;
+    align-self: start;
+    border-radius: 100px;
+}
+
+
+/*
+----------------------------
+    @AUDIO PLAYER 
+----------------------------
+*/
+
+.player-container {
+    margin: 20px 0 20px 0;
+}
+
+p.title-speech {
+    font-family: 'Futura-Regular';
+    font-size: 1.1em !important;
+    font-weight: 800;
+    margin: 0 0 0 15px !important;
+}
+
+.audio-player-wrapper {
+    border-radius: 12px;
+    border: 1px solid #B8B8B8;
+    background-color: #f9f9f9;
+    filter: saturate(0.8) brightness(1.05);
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.custom-audio-player {
+    width: 100%;
+    display: block; // Asegura que ocupe todo el espacio del wrapper
+}
+
+.grid-item-content .player-container {
+    margin: 10px 0 10px 0 !important
+}

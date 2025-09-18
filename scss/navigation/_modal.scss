@@ -1,0 +1,55 @@
+.modal {
+    display: none; // Ocultar la modal por defecto
+    position: fixed; // Fijar la posición de la modal
+    z-index: 9; // Colocar la modal por encima de otros elementos
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; // Permitir el desplazamiento si es necesario
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+
+    transition: opacity 0.5s ease; // Transición de opacidad
+    opacity: 0; // Opacidad inicial
+
+    &.show {
+        display: block;
+        opacity: 1; // Opacidad cuando está visible
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        height: 500px;
+        position: relative;
+
+        .close {
+            background: #536cf0;
+            display: flex;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            justify-content: center;
+            align-items: stretch;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                background: black;
+            }
+
+            .close-icon {
+                font-size: 2em;
+                color: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+//----------------------------------------
+//            FLOAT BAR
+//----------------------------------------
+
+#nav-float {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 70px;
+	width:100%;
+	padding: 0 20px;
+	background:#ededed;
+	z-index:9999;
+	box-shadow: 2px 2px 5px #767676;
+
+	figure {
+		margin: 0;
+
+		& img {
+			max-height:44px; //Logo Size
+			}
+	}
+}
+
+
+
+//----------------------------------------
+//            FLOAT MENU
+//----------------------------------------
+
+#nav-float .float-nav {
+	@include copy-text;
+	font-size: 1em; // FLoat Menu Font Size
+
+}
+
+ul.float-nav {
+	list-style: none;
+	display: flex;
+	flex-direction: row; // Menu Direction
+	margin: 0 !important;
+
+	& li a {
+		color: $black; // Menu Font Color
+		text-decoration: none;
+		padding: 0 10px;
+
+		&:hover {
+			color: #ccc !important;
+		}
+	}
+}

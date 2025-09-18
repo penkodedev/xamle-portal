@@ -1,0 +1,97 @@
+/*
+----------------------------
+    @LOGIN PAGE  
+----------------------------
+*/
+
+.logo-container-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.page-template-login #grid-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-template-login #logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    
+
+    img {
+        max-width: 140px;
+    }
+}
+
+body.page-template-login {
+	background-color: #dedede;
+}
+
+form#loginform {
+	background: #efefef;
+	padding: 35px 35px 0 35px;
+    margin: 50px auto;
+    width: 800px;
+	-webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.32);
+	-moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.32);
+	box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.32);
+	border-radius: 10px;
+}
+
+.login-options-container {
+    display: flex;
+}
+
+.show-pass,
+.remind-pass {
+    margin: 0 12px;
+}
+
+#loginform #error-message {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 22px;
+    background: rgb(255, 233, 136);
+    justify-content: center;
+}
+
+p.submit {
+    display: flex;
+    justify-content: center;
+}
+
+
+.page-template-login header,
+.page-template-login footer {
+    display: none;
+}
+
+.login-remember,
+.login-submit,
+.page-template-login #MainContainer,
+.page-template-login article {
+    display: flex;
+    justify-content: center;
+}
+
+p.login-remember {
+		line-height: normal;
+		margin: 0;
+	}
+
+.login-username > label,
+.login-password > label {
+    display: block;
+}
+
+.logged-in main p a {
+    margin: 20px auto;
+    width: 250px;
+}
+
+/** NEW LOGIN PAGE **/
+

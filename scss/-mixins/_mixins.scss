@@ -1,0 +1,165 @@
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin copy-text ($text-margin:0px 0px 1.8em 0px) {
+    font: $text-size $text-font;
+	font-weight: 300;
+    line-height: $text-lh;
+	
+    color: $text-color;
+	margin: $text-margin;
+}
+
+@mixin copy-text-strong ($text-margin:0px 0px 1.8em 0px) {
+    font: $text-size $text-font-strong;
+    line-height: $text-lh;
+	letter-spacing: .01em;
+    color: $text-color;
+	margin: $text-margin;
+}
+
+@mixin heading () {
+    font-family:$heading-font;
+    font-weight: $normal;
+    color: $heading-color;
+    margin: $heading-margin;
+    letter-spacing: $heading-letter-spacing;
+}
+
+@mixin heading-links () {
+    font-family:$heading-font;
+    font-weight: $normal;
+    text-decoration: none;
+    color: $heading-color;
+    letter-spacing: $heading-letter-spacing;
+}
+
+@mixin page-title () {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: $page-title-bg-color;
+    //border-top: 1px solid #ccc;
+    
+}
+
+@mixin page-title-h1 {
+    font: $normal $page-title-font-size $page-title-font;
+    color: $page-title-color;
+    // letter-spacing: $heading-letter-spacing;
+    // line-height: $page-title-lh;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin caption () {
+    font: $normal $text-size $text-font ;
+    font-size: ($text-size/1.3);
+    color: $caption-color !important;
+    margin: $caption-margin;
+    text-align: $caption-align;
+}
+
+@mixin pagination {
+    background-color: $button-bg-color;
+    font-family:$text-font;
+    text-transform: uppercase;
+    color:$black    ;
+    margin-bottom: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.2em 0.8em;
+    margin: 0px 2px;
+    @include transition (background-color .5s ease);
+    
+    &:hover {
+        background-color: $button-bg-color-hover;
+        color: $button-link-color-hover;
+        
+            &:active,
+            a:active {
+                background-color: $button-bg-color-hover;
+        }
+    }
+}
+
+@mixin inputs() {
+    font-size: $text-size/1.2;
+    color: $input-text-color;
+    background-color: $input-bg-color;
+    border: 1px solid rgb(95, 95, 95);
+    border-radius: 12px;
+    padding: 15px;
+    width: 100%;
+
+    &:hover,&:focus,&:active {
+        //color: $input-text-color-focus;
+        background-color:$input-bg-color-focus;
+        border-color: $input-border-active-color;
+        box-shadow: none;
+        border-color: $branding-color1;
+    }
+}
+
+@mixin button-base {
+    font-family: $text-font;
+    font-weight: 700;
+    background: $branding-color1;
+    color: $black;
+    text-decoration: none;
+    text-align: center;
+    margin: 20px 0;
+    border: 0px;
+    border-radius: 12px;
+
+    //box-shadow: 0 .19em rgba(0, 0, 0, .2);
+    cursor: pointer;
+    
+    @include transition (background .6s ease);
+    background-size: 210% 100%;
+    background-position: 99% center;
+    background-image: linear-gradient(100deg, rgb(184, 184, 184) 50%, $button-bg-color 50%);
+
+
+    &:hover {
+        background: $button-bg-color-hover;
+        color: $button-link-color-hover;
+        //box-shadow: 0 .19em rgba(0, 0, 0, .5);
+
+        //&:active,
+        //a.button:active {
+        // box-shadow: inset 0 0 1.094em #472566, inset 0 .063em #390668, inset 0 -0.188em #682CA0, 0 .063em rgba(255,255,255,.4);
+        }
+    }
+
+@mixin button-little {
+    @include button-base();
+    font-size: ($text-size/1.9);
+    padding: 0.5em 1.3em;
+    //border-radius: $border-radius-l; //on theme-layout.scss
+}
+
+@mixin button-medium {
+    @include button-base();
+    font-size: ($text-size/1);
+    padding: 0.68em 2em;
+    //border-radius: $border-radius-m; //on theme-layout.scss
+}
+
+@mixin button-big {
+    @include button-base();
+    font-size: ($text-size+0.4);
+    padding: 0.88em 3.7em;
+    //border-radius: $border-radius-x; //on theme-layout.scss
+}
+
+
+/* POSSIBILITY TO USE IDs OF MIXINS ABOVE */
+.btn {
+    background-color: blue;
+}

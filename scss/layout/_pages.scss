@@ -1,0 +1,92 @@
+/*
+----------------------------
+    @PAGES 
+----------------------------
+*/
+
+.prewrap {
+    white-space: pre;
+}
+#main-container {
+    padding: 40px 0 80px 0;
+    position: relative;
+}
+
+.no-post-msj {
+    text-align: center;
+    border-radius: 12px;
+    border: 3px solid #dbdbdb;
+    color: $black;
+    margin: 20px 0 40px 0;
+    padding: 20px;
+    max-width: 70%;
+    margin: 0 auto
+}
+
+.page-title {
+    @include page-title;
+    // background-color: #090909;
+    // opacity: 0.8;
+    // background-image:  linear-gradient(135deg, #000000 25%, transparent 25%), linear-gradient(225deg, #000000 25%, transparent 25%), linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, #090909 25%);
+    // background-position:  10px 0, 10px 0, 0 0, 0 0;
+    // background-size: 20px 20px;
+    // background-repeat: repeat;
+
+    h1 {
+        @include page-title-h1
+    }
+}
+
+//section.page-title {
+//
+//}
+
+article#container {
+    padding: 0px 0px 60px 0px;
+}
+
+.time {
+    @include copy-text (0px 0px 1em 0px);
+    font-size: $text-size - 0.35rem;
+    line-height: $text-lh/1.66;
+
+    &:before {
+        content: '\f017';
+        font-family: 'FontAwesome';
+        font-style: normal;
+        font-size: $text-size - 0.35rem;
+        color: $text-color;
+        padding: 0px 5px 0px 0px;
+    }
+}
+
+.error404.page-title {
+    display: none;
+}
+
+.error404 #grid-one-col {
+    grid-template-rows: 130px 100px 1fr auto;
+}
+
+
+
+
+/* Página recursos*/
+.recursos-summary {
+    margin: -50px 0 55px 0;
+
+    p {
+        font-size: 1em;
+    }
+
+    a {
+        color: #000 !important;
+        font-weight: 100;
+        text-decoration: underline !important;
+        background-image: none !important;
+
+        &:hover {
+            background-color: $branding-color1;
+        }
+    }
+}

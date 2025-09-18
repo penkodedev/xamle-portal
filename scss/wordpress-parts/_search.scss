@@ -1,0 +1,110 @@
+/*
+----------------------------
+    @SEARCH WIDGET FORM  
+----------------------------
+*/
+
+.wp-block-search__button-outside {
+    padding: 0;
+    @include copy-text;
+    font-size: 1em;
+}
+
+.wp-block-search .wp-block-search__inside-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+label.wp-block-search__label {
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+}
+
+.wp-block-search__input {
+    @include inputs;
+    margin-bottom: 10px;
+}
+
+.wp-block-search .wp-block-search__button {
+    margin: 0 !important;
+    width: 100%;
+    background-color: $black !important;
+    color: $white !important;
+    padding: 9px 0 9px 0 !important;
+    
+    &:hover {
+        background-color: $branding-color2 !important;
+        color: $black;
+    }
+}
+
+/*
+----------------------------
+    @SERCH FORM  
+----------------------------
+*/
+
+.search-field {
+    background-color: $white;
+    background-image: url(images/lupe.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    border: none;
+    cursor: pointer;
+    height: 37px;
+    margin: 3px 0;
+    padding: 20px;
+    position: relative;
+    -webkit-transition: width 400ms ease, background 500ms ease;
+    transition:         width 400ms ease, background 500ms ease;
+    width: 0;
+}
+ 
+.search-field:focus {
+    background-color: #fff;
+    border-bottom: 1px solid black;
+    cursor: text;
+    outline: 0;
+    padding: 20px;
+    width: 280px;
+
+    @media screen and (max-width: 400px) {
+        width: 200px;
+    }
+}
+
+.search-form .search-submit {
+    display: none;
+}
+
+/*
+----------------------------
+    @SEARCH PAGE  
+----------------------------
+*/
+.search-terms{
+    font-weight: $bold;
+}
+
+.search-box {
+    margin-bottom: 2em;
+}
+
+.search-box p, search-box a {
+    margin: 0px;
+}
+.search-box .search-link a {
+    text-decoration: none;
+    color: blue;
+    font-size: $text-size+0.3;
+    font-weight: $bold;
+}
+.search-box .search-date,
+.search-box .search-url {
+    font-size: $text-size - 0.3;
+}
+
+.search-box .search-excerpt {
+    font-size: $text-size - 0.13;
+}

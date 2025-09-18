@@ -1,0 +1,123 @@
+/*
+----------------------------
+@FOOTER 
+----------------------------
+*/
+
+footer {
+    display: flex;
+    align-items: center;
+    padding: 90px 0 0 0;
+    position: relative;
+    //margin-top: 100px;
+    //background: $footer-bg-color;
+    border-top: 1px solid #c9c9c9;
+    background-color: #fff;
+
+     body.home & {
+        border-top: 0 !important;
+    }
+
+    :is(footer h1, footer h2, footer h3, footer h4, footer h5, footer h6) {
+        //FOOTER HEADINGS COLOR
+        font-size: 1em;
+        color: $black;
+        margin: 40px 0 0 0;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            color: rgb(99, 99, 99) !important;
+        }
+    }
+}
+
+.footerbox-container {
+	display: flex;
+	flex-direction: column;
+
+	@media screen and (max-width: 600px) { // responsive footer content
+		display: block;
+	}
+}
+
+.footer-content {
+	display: flex;
+	flex-direction: column; //footer content orientation
+    margin: 0px auto;
+    padding: 0;
+
+    p {
+        @include copy-text;
+        font-size: $text-size/1.3;
+        line-height: $text-lh/1.15;
+        max-width: 750px;
+
+        p b {
+            color: $black;
+        }
+    }
+}
+
+.footer-widgets {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-flow: wrap;
+    margin: 0px auto 30px auto;
+}
+
+.footerbox {
+    margin: 0 40px;
+}
+
+
+.footerbox ul {
+    font-family: $text-font;
+    font-size: $text-size - 0.1;
+    color: $black;
+    list-style-type: none;
+    text-align: left;
+    padding: 0px;
+
+    li {
+        max-width: 800px;
+        line-height: $text-lh;
+    }
+}
+
+.footerbox ul li a {
+    text-decoration: none;
+    color: $black;
+    
+    &:hover {
+        color: $branding-color1;
+		text-decoration: none;
+    }
+}
+
+.footerbox ul.wp-block-social-links {
+    font-size: 2.4em;
+}
+
+.copyright {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    margin: 10px 20px;
+	
+	p small {
+		color: $black;
+	}
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    
+    img {
+    max-width: 90px;
+}
+}

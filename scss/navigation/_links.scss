@@ -1,0 +1,151 @@
+//----------------------------------------------------
+//            ARTICLE
+//----------------------------------------------------
+
+
+$article-link: 'article p a:link, main p a:link, article ol a:link, p#breadcrumbs a,';
+
+$article-link-decoration-color: #ffb41d;
+
+#{$article-link},
+:visited {
+    color: $black;
+    text-decoration: none;
+    padding: 0px 0px;
+    transition: color 0.6s ease-out, background 0.6s ease-out;
+    background-image: linear-gradient(to right,
+            $article-link-decoration-color 100%,
+            #000 0);
+    background-position: 0 163%;
+    background-repeat: repeat-x;
+    background-size: 100% 50%; // más gordito que 35%
+
+    &:hover {
+        color: $white;
+        background: $branding-color1;
+        text-decoration: none;
+        border-bottom: none;
+    }
+}
+
+
+.wp-block-gallery figure a,
+article a img {
+    transition: transform .3s;
+
+    /* Animation */
+    &:hover {
+        transform: scale(1.013);
+    }
+}
+
+//----------------------------------------------------
+//            SIDEBAR
+//----------------------------------------------------
+
+aside .sidebox ul {
+    padding: 0;
+    margin: 0 0 20px 0;
+
+    li {
+        padding: 6px;
+        list-style: none;
+
+        a {
+            @include copy-text;
+            //font-size: $second-level-link-size;
+            color: $black;
+            text-decoration: none;
+            line-height: $second-level-link-size / 0.65;
+            margin: 0;
+
+
+            &:hover {
+                color: $branding-color1;
+            }
+
+            &:before {
+                content: "\f0c8";
+                font-family: "FontAwesome";
+                font-size: 0.84em;
+                color: $branding-color1;
+                padding: 0 8px 0 0;
+            }
+        }
+    }
+}
+
+
+//----------------------------------------------------
+//            LOGIN PAGE
+//----------------------------------------------------
+
+.page-template-login article {
+    display: flex;
+    justify-content: center;
+}
+
+.page-template-login article a {
+    margin: 10px;
+}
+
+
+//----------------------------------------------------
+//            BACK TO TOP
+//----------------------------------------------------
+.back-to-top {
+    display: none;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    bottom: 20px;
+    right: 20px;
+    width: 39px;
+    height: 39px;
+    border-radius: 7px;
+    cursor: pointer;
+    background: #a3a3a3;
+    z-index: 9999;
+
+    &:before {
+
+        content: '\f106';
+        font-family: 'FontAwesome';
+        font-size: 1.8em;
+        color: $white;
+    }
+}
+
+.back-to-top:hover {
+    background: $branding-color1;
+
+    &:before {
+        color: $black;
+    }
+}
+
+//----------------------------------------------------
+//            GENERAL STUFF
+//----------------------------------------------------
+
+article a img:hover {
+    background: none !important;
+}
+
+//----------------------------------------------------
+//            COOKIES
+//----------------------------------------------------
+
+.cc-banner.cc-bottom {
+    bottom: 50px !important;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background: white; // to overwrite javascript color value
+    color: black; // to overwrite javascript color value
+    border-radius: 5px;
+
+    -webkit-box-shadow: 0px 0px 31px 7px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 0px 0px 31px 7px rgba(0, 0, 0, 0.29);
+    box-shadow: 0px 0px 31px 7px rgba(0, 0, 0, 0.29);
+}

@@ -1,0 +1,49 @@
+/*
+----------------------------
+    @BUTTONS   
+----------------------------
+*/
+button,
+.button,
+a.button,
+button a,
+p a.button,
+
+#nav-single .pag-previous a,
+#nav-single .pag-next a,
+
+input#wp-submit.button.button-primary,
+input.wpcf7-submit,
+
+.page-template-login article a {
+    @include button-base;
+    @include button-medium;
+}
+
+.post-col.post-full div.grid-item div.grid-item-content a.button {
+    @include button-base;
+    @include button-little;
+}
+
+// GUTENBERG BUTTONS
+a.wp-block-button__link {
+    @include button-base;
+  }
+
+/*
+* DEFINE Classes FOR BUTTON MIXINS 
+*/
+.button-little {
+    @include button-base;
+    @include button-little;
+}
+
+.button-medium {
+    @include button-base;
+    @include button-medium;
+}
+
+.button-big {
+    @include button-base;
+    @include button-big;
+}

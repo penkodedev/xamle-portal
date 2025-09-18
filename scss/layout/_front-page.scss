@@ -1,0 +1,77 @@
+
+//-------------------------------------------------
+//            HOME FULL WIDTH
+//-------------------------------------------------
+
+body.home {
+	background-color: #fff !important;
+}
+
+#home-full-col .full-slider {
+    position: relative;
+    display: block;
+    width: 100%;
+	top: -130px; //HEADER HEIGHT COMPENSATE SLIDER & MAIN CONTENT (value from GRID SYSTEM header)
+}
+
+span.slider-title {
+	color: $white;
+	text-shadow: 0px 1px 3px #000000;
+}
+
+.home main {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+	justify-content: center;
+}
+
+#home-full-col main {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0;
+	margin-top: -130px; //HEADER HEIGHT COMPENSATE SLIDER & MAIN CONTENT
+}
+
+#home-full-col main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#home-full-col main article {
+	width: 90%;
+
+	@media screen and (max-width: 800px) {
+		width: 100%;
+		padding: 0 4% 0 4%;
+	}
+}
+
+
+#home-full-col main section {
+	padding: 70px 0 0 0;
+}
+
+.section-01 {
+	background: #FFF;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.section-02 {
+	background: #FFF;
+	margin-bottom: 80px;
+}
+
+.button-carousel {
+	display: flex;
+    justify-content: center;
+    margin: 40px 0 0 0;
+
+	a.button {
+		text-align: center;
+	}
+}

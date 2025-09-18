@@ -1,0 +1,35 @@
+/*
+----------------------------
+    @SIDEBAR 
+----------------------------
+*/
+
+aside {
+    background: $sidebar-bg-color;
+    border-left: 1px solid #d9d9d9;
+
+    .sidebar {
+        position: sticky;
+        top: 90px; // necessary for STICKY position
+        border-left: none;
+        padding: 40px 0 40px 30px; // same as GRID GAP
+
+
+        h3 {
+            font-size: calc(1rem + 1vmin);
+            line-height: $text-lh/1;
+        }
+    }
+
+    .sidebox {
+        margin-bottom: 0px;
+    }
+
+    a {
+        font-size: 1.15em !important;
+
+        &:hover {
+            color: #777777 !important;
+        }
+    }
+}

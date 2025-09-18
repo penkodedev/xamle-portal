@@ -1,0 +1,106 @@
+/*
+----------------------------
+    @HEADER  
+----------------------------
+*/
+
+header {
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.home header {
+    border-bottom: none;
+    z-index: 99;
+}
+
+.grid-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+}
+
+.home .grid-header {
+    background-color: transparent;
+}
+
+#header-container {
+    padding: 0 35px 0 35px;
+}
+
+
+.logo-container-wrap {
+    display: flex;
+    align-items: center;
+    gap:15px;
+
+    .logo-mad {
+        border-left: 1px solid #ccc;
+
+        img {
+            margin: 0 0 0 10px !important;
+        }
+    }
+}
+
+.home .logo-container-wrap .logo-mad {
+        border-left: 1px solid #353535;
+}
+
+figure#logo-container-mad {
+    margin: 0 !important;
+}
+
+header figure#logo-container {
+    width: 105px; // LOGO TOP SIZE
+    margin: 0 !important;
+
+    img {
+        shape-rendering: geometricPrecision;
+        width: 100%;
+        height: auto;
+    }
+}
+
+header #logo-container a:link,
+header #logo-container a:visited {
+    border: 0px;
+    background: none;
+    cursor: pointer;
+    display: block;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+
+header #logo-container a:hover {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+.top-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    background: $branding-color1;
+    height: 4em;
+    padding: $padding20;
+
+    p {
+        font-size: $text-size/1.5;
+    }
+}
+
+
+.search-form {
+    position: absolute;
+    margin-right: 116px;
+    top: 42px;
+}

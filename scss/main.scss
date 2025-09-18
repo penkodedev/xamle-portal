@@ -1,0 +1,81 @@
+/*! -------------------------------------------------
+Theme Name: Xamle Theme
+Theme URI: http://www.xamle.es/
+Description: Xamle theme. You can create a child theme, but it's not necesary. You can create your theme through the SASS files included for build your WordPress site. Created by Paulo Ramalho.
+Author: Paulo Ramalho (wwww.penkode.com)
+Author web: www.penkode.com
+Author URI: www.penkode.com
+Version: 1.0
+.
+For exclusive use of Mad África ONG.
+.
+----------------------------------------------*/
+
+//Mixins (do not generate CSS code)
+@import "-mixins/mixins";
+@import "-mixins/mixins-effects";
+
+
+//Variables (DO NOT GENERATE CSS CODE BY ITSELF)
+@import "-variables/theme-fonts";
+@import "-variables/theme-colors";
+@import "-variables/theme-layout";
+@import "-variables/theme-tables";
+
+
+//HTML Resets
+@import "html/resets";
+
+//Typography
+@import "typography/font-face";
+@import "typography/fonts";
+
+
+//Layout Structure
+@import "layout/effects"; // CSS efects & animations
+@import "layout/grid-layout";
+@import "layout/grid-posts-col";  // choose between col or full for post grid
+@import "layout/pages";
+@import "layout/pages-archives";
+@import "layout/pages-singles";
+@import "layout/front-page";
+
+
+//Template Parts
+@import "layout/modals";
+@import "layout/accordions";
+@import "layout/see-more";
+
+
+//Navigation Menus
+@import "navigation/nav-megamenu";
+@import "navigation/nav-main";
+@import "navigation/nav-footer";
+@import "navigation/nav-float";
+@import "navigation/nav-mobile";
+@import "navigation/links";
+@import "navigation/buttons";
+@import "navigation/pagination";
+@import "navigation/social";
+@import "navigation/modal";
+
+
+//HTML, WordPress cparts & Plugins
+@import "html/fields";
+@import "html/tables";
+@import "wordpress-parts/gutenberg";
+@import "wordpress-parts/media";
+@import "wordpress-parts/search";
+@import "wordpress-parts/login";
+@import "wordpress-parts/header";
+@import "wordpress-parts/sidebar";
+@import "wordpress-parts/footer";
+
+//Plugins
+@import "plugins/plugins";
+
+//Media Queries
+@import "responsive/media-queries";
+
+//Animations
+@import "layout/animations";
