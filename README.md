@@ -117,9 +117,3 @@ Distribuido bajo la Licencia MIT. Ver `LICENSE` para más información.
 Desarrollado por Penkode (Paulo Ramalho)
 
 ```
-
-Este `README.md` está en Markdown y es muy completo. Explica qué hace el proyecto, qué tecnologías usa, cómo instalarlo y la estructura de archivos. ¡Espero que te sea de gran ayuda!
-
-<!--
-[PROMPT_SUGGESTION]¿Podrías generar un archivo `LICENSE` con la licencia MIT para este proyecto?[/PROMPT_SUGGESTION]
-[PROMPT_SUGGESTION]Basado en el `README.md`, ¿qué pasos debería seguir para desplegar este backend de WordPress en un servidor de producción?[/PROMPT_SUGGESTION]
